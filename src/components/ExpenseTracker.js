@@ -13,8 +13,10 @@ const ExpenseTracker = () => {
     return (
         <div>
             <ExpenseForm addExpense={addExpense} />
-            <ExpenseSummary expenses={expenses} />
-            <ExpenseList expenses={expenses} />
+            <div className="flex flex-col justify-evenly md:flex-row text-center">
+                <ExpenseSummary expenses={expenses} />
+                <ExpenseList expenses={expenses} />
+            </div>
         </div>
     );
 };

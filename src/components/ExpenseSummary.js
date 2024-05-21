@@ -7,12 +7,13 @@ const ExpenseSummary = ({ expenses }) => {
     }, {});
 
     return (
-        <div>
-            <h2>Résumé des Dépenses par Catégorie</h2>
-            <ul>
+        <div className="m-4 w-full md:w-1/3">
+            <h2 className="text-xl font-semibold m-2">Expense Summary by Category</h2>
+            <ul className="list-disc list-inside">
                 {Object.keys(summary).map((category) => (
-                    <li key={category}>
-                        {category}: {summary[category]}€
+                    <li key={category} className="m-2 p-2 border rounded flex justify-between items-center">
+                        <span>{category}</span>
+                        <span className="font-bold">{summary[category]}€</span>
                     </li>
                 ))}
             </ul>

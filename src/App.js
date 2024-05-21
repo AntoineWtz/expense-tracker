@@ -1,11 +1,10 @@
 import React from 'react';
 import ExpenseTracker from './components/ExpenseTracker';
-import './App.css';
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Suivi des Dépenses</h1>
+    <div className="App container mx-auto p-4">
+      <h1 className="text-2xl font-bold m-4 text-center">Expense Tracker</h1>
       <ExpenseTracker />
     </div>
   );
